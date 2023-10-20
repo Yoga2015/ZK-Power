@@ -1,4 +1,5 @@
 import os from 'os';
+// import cluster from 'cluster';
 import cluster from 'cluster';
 import { PublicKey, Signature, VerificationKey, Field } from 'snarkyjs';
 import cp, { ChildProcess, ChildProcess as Worker } from "child_process";
