@@ -29,7 +29,7 @@ export type SubProcessCordinator = {
 type WorkerStatus = 'IsReady' | 'Busy';
 
 export const createSubProcesses = async (n: number) => {
-    let cores = os.cpus().length - 2;
+    let cores = os.cpus().length - 4;
     logger.info(`Number of CPUs is ${cores}`);
     logger.info(`Master ${process.pid} is running`);
     if (cores <= n) {
