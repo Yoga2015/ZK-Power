@@ -59,7 +59,11 @@ class TaskStack<T> extends Array<T> {
 
     async work(): Promise<T> {
         this.isIdle = false;
-        await this.filterAndReduce();
+        try {
+      await this.filterAndReduce();
+    } catch (error) {
+      console.log(error);
+    }
         return this.result![0];
     }
 }
