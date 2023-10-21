@@ -1,6 +1,7 @@
 import { FastifyReply } from "fastify"
 
-declare module 'fastify' {
+declare module 'fastify' 
+{
 
     interface FastifyInstance {
         authGuard(request: FastifyRequest, reply: FastifyReply): void
