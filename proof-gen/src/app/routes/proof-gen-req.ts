@@ -15,7 +15,7 @@ export const proofGenReqEndpoint: FastifyPlugin = async function (
     instance.route({
         method: "POST",
         url: "/proof-gen",
-        //preHandler: [instance.authGuard],
+        preHandler: [instance.authGuard],
         schema,
         handler
     })
