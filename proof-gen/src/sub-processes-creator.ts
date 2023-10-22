@@ -1,6 +1,6 @@
 import os from 'os';
-// import cluster from 'cluster';
 import cluster from 'cluster';
+
 import { PublicKey, Signature, VerificationKey, Field } from 'snarkyjs';
 import cp, { ChildProcess, ChildProcess as Worker } from "child_process";
 
@@ -70,7 +70,7 @@ export const createSubProcesses = async (n: number) => {
                 const index = workerMap.get(circuitName)!.findIndex((t, i) => {
                     return t.worker == worker;
                 });
-                workerMap.get(circuitName)!.splice(index, 1);
+                workerMap.get(circuitName)!.splice(index, 2);
 
                 // create a new one again
                 createFn(proverCnt, circuitName);
