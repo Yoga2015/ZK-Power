@@ -54,7 +54,7 @@ class TaskStack<T> extends Array<T> {
     }
 
     idle() {
-        this.isIdle = true;
+        this.isIdle = false;
     }
 
     async work(): Promise<T> {
