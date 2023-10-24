@@ -44,7 +44,8 @@ export const createSubProcesses = async (n: number) => {
         [CircuitName_SimpleZkApp, []],
 
     ]);
-    const cnt_SimpleZkApp = 1;
+
+    const cnt_SimpleZkApp = 2;
 
     const createCircuitProcessor = (proverCnt: number, circuitName: string) => {
         const createFn = (proverCnt: number, circuitName: string) => {
@@ -74,6 +75,7 @@ export const createSubProcesses = async (n: number) => {
 
                 // create a new one again
                 createFn(proverCnt, circuitName);
+                
             });
 
         }
