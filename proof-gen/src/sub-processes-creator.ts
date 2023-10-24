@@ -72,8 +72,13 @@ export const createSubProcesses = async (n: number) => {
                 });
                 workerMap.get(circuitName)!.splice(index, 2);
 
-                // create a new one again
-                createFn(proverCnt, circuitName);
+              try {
+                  // create a new one again
+                  createFn(proverCnt, circuitName);
+              } catch (error) {
+                console.log(error);
+                
+              }
             });
 
         }
