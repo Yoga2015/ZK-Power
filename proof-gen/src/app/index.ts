@@ -64,7 +64,7 @@ export class FastifyCore {
             return this.server.listen(config.port, "0.0.0.0")
         } catch (err) {
             this.server.log.error(err)
-            // process.exit(1)
+            process.exit(2)
         }
     }
 
