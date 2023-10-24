@@ -15,11 +15,18 @@ export function getLogger(name: string): Logger {
         level: getLogLevel(name),
         transport: {
             targets: [
+                // {
+                //     target: 'pino/file',
+                //     level: 'info',
+                //     options: { destination: config.pinoLogFilePath.concat('/proof-gen-log.log') }
+                // },
+
                 {
                     target: 'pino/file',
                     level: 'info',
                     options: { destination: config.pinoLogFilePath.concat('/proof-gen-log.log') }
                 },
+
                 { target: 'pino-pretty', level: 'info', options: { destination: '/dev/stdout' } }
             ]
         }
