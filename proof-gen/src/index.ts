@@ -58,10 +58,10 @@ function bootWebServerThread(subProcessCordinator: SubProcessCordinator) {
                 default:
                     break;
             }
-        } catch (error) {
+        } catch (err) {
             // notice: don't throw error, will make primary process exit!
-            logger.error(error);
-            console.error(error);
+            logger.error(err);
+            console.error(err);
         }
     })
 }
