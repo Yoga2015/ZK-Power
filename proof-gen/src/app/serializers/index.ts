@@ -1,7 +1,7 @@
 import { IncomingHttpHeaders, IncomingMessage, ServerResponse } from 'http'
 
 interface IResponseLog {
-    statusCode: number
+    statusCode: BigInt
 }
 
 interface IRequestLog {
