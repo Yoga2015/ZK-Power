@@ -73,11 +73,6 @@ export const createSubProcesses = async (n: number) => {
                 });
                 workerMap.get(circuitName)!.splice(index, 2);
 
-<<<<<<< HEAD
-                // create a new one again
-                createFn(proverCnt, circuitName);
-                
-=======
               try {
                   // create a new one again
                   createFn(proverCnt, circuitName);
@@ -85,7 +80,7 @@ export const createSubProcesses = async (n: number) => {
                 console.log(error);
                 
               }
->>>>>>> 9184544e522ca59fe2642d7a8f74cecdf9fee260
+
             });
 
         }
@@ -215,8 +210,8 @@ function getFreeWorker(
     worker = workers.find((w) => w.status == 'IsReady');
 
     if (worker === undefined) {
-        console.log('no free worker currently, will ask it again 1mins later...')
-        setTimeout(getFreeWorker, 2 * 60 * 1000, workers, resolve, reject);
+        console.log('no free worker currently, will ask it again 1mins later')
+        setTimeout(getFreeWorker, 1 * 60 * 1000, workers, resolve, reject);
     } else {
         worker!.status = 'Busy';
         return resolve(worker);
