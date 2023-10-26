@@ -6,9 +6,8 @@ export function throwError(
     message: string,
     thrownError?: Error
 ): FastifyError {
-    if (thrownError) {
         this.log.error(thrownError)
-    }
+
    const err = new Error() as FastifyError
     err.statusCode = statusCode;
     err.message = message;
