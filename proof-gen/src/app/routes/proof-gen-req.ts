@@ -27,7 +27,12 @@ const handler: RequestHandler<ProofTaskDto<any, any>, null> = async function (
 ): Promise<BaseResponse<string>> {
     const { taskType, index, payload } = req.body;
 
-    (process as any).send(req.body);
+   try {
+       (process as any).send(req.body);
+   } catch (error) {
+    console.log(error);
+    
+   }
 
 
     return {
