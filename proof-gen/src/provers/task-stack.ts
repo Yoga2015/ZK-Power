@@ -32,7 +32,7 @@ class TaskStack<T> extends Array<T> {
     }
 
     private async filterAndReduce() {
-        if (!this.isIdle) {
+        if (this.isIdle) {
             let n = this.length;
             let ys = this.filterStep(this, n).slice();
             if (ys != undefined) {
