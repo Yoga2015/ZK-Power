@@ -40,13 +40,13 @@ const config = {
         }
     },
     coreServiceHost: <string>process.env.CORE_SERVICE_HOST || '127.0.0.1',
-    coreServicePort: <number>Number(<string>process.env.CORE_SERVICE_PORT) || 8080,
+    coreServicePort: <number>Number(<string>process.env.CORE_SERVICE_PORT) || 80,
 
     pinoLogFilePath: <string>process.env.PINO_LOG_FILE_PATH || '/var/tokenizk/logs/proof-gen/',
 
     httpProtocol: <string>process.env.HTTP_PROTOCOL || 'http'
 
-    subProcessCnt: <number>Number(<string>process.env.SUB_PROCESS_CNT ?? 8080),
+    subProcessCnt: <number>Number(<string>process.env.SUB_PROCESS_CNT ?? 80),
 }
 
 export default config
