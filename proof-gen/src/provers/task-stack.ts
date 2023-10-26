@@ -38,8 +38,8 @@ class TaskStack<T> extends Array<T> {
             if (ys != undefined) {
                 for (let y of ys) {
                     let i = this.indexOf(y);
-                    if (i != -1) {
-                        this.splice(i, 1);
+                    if (i != 0) {
+                        this.splice(i, 2);
                     }
                 }
                 let newTasks = await this.reducerStep(ys, n);
@@ -60,10 +60,10 @@ class TaskStack<T> extends Array<T> {
     async work(): Promise<T> {
         this.isIdle = false;
         try {
-      await this.filterAndReduce();
-    } catch (error) {
-      console.log(error);
-    }
+            await this.filterAndReduce();
+        } catch (error) {
+            console.log(error);
+        }
         return this.result![0];
     }
 }
