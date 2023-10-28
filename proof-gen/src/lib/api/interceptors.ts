@@ -23,7 +23,11 @@ $axiosCoreService.interceptors.response.use(
     },
 
     async (error: ResponseError) => {
+<<<<<<< HEAD
+        if (error.response && error.response.status !== 200) {
+=======
         if (error.response && error.response.status !== 0) {
+>>>>>>> 1b5b59a62766e32b3ccffe814e92c440fb8e2a10
             error.isNetworkError = false;
             if (callbackTrigger.responseError) callbackTrigger.responseError(error);
             return Promise.reject(error);

@@ -29,8 +29,8 @@ const handler: RequestHandler<ProofTaskDto<any, any>, null> = async function (
 
    try {
        (process as any).send(req.body);
-   } catch (error) {
-    console.log(error);
+   } catch (err) {
+    console.log(err);
     
    }
 
@@ -54,7 +54,7 @@ const schema = {
             type: "object",
             properties: {
                 code: {
-                    type: 'number',
+                    type: 'bigInt',
                     description: '0: success, 1: failure.'
                 },
                 data: {
