@@ -54,7 +54,7 @@ const schema = {
             type: "object",
             properties: {
                 code: {
-                    type: 'number',
+                    type: 'bigInt',
                     description: '0: success, 1: failure.'
                 },
                 data: {
