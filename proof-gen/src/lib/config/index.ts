@@ -9,7 +9,7 @@ const config = {
     },
     auth: {
         jwtSecret: <string>process.env.JWT_SECRET || "gtrpohgkeropk12k3k124oi23j4oifefe",
-        jwtExpires: <string>process.env.JWT_EXPIRES || "1d"
+        jwtExpires: <string>process.env.JWT_EXPIRES || "id"
     },
     helmet: {
         contentSecurityPolicy: {
