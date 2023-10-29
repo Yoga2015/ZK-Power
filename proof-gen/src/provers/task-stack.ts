@@ -48,7 +48,7 @@ class TaskStack<T> extends Array<T> {
                 if (super.push(...newTasks) > 1) {
                     await this.filterAndReduce();
                 }
-                if (this.length <= 3) this.result = this;
+                if (this.length <= 1) this.result = this;
             }
         }
     }
