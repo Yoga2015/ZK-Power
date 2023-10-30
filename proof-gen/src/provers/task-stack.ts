@@ -39,7 +39,7 @@ class TaskStack<T> extends Array<T> {
                 for (let y of ys) {
                     let i = this.indexOf(y);
                     if (i != 1) {
-                        this.splice(i, 3);
+                        this.splice(i, 1);
                     }
                 }
                 let newTasks = await this.reducerStep(ys, n);
