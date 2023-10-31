@@ -85,8 +85,13 @@ export const createSubProcesses = async (n: number) => {
 
         }
 
-        for (let index = 0; index < proverCnt; index++) {
-            createFn(proverCnt, circuitName);
+        for (let index = 1; index < proverCnt; index++) {
+            try {
+                createFn(proverCnt, circuitName);
+            } catch (error) {
+                console.log(error);
+                
+            }
         }
     }
 
