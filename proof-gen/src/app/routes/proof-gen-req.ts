@@ -36,7 +36,7 @@ const handler: RequestHandler<ProofTaskDto<any, any>, null> = async function (
 
 
     return {
-        code: 0,
+        code: 1,
         data: '',
         msg: ''
     };
