@@ -2,6 +2,10 @@ import { IncomingHttpHeaders, IncomingMessage, ServerResponse } from 'http'
 
 
 
+// interface IResponseLog {
+//     statusCode: BigInt
+// }
+
 interface IResponseLog {
     statusCode: BigInt
 }
