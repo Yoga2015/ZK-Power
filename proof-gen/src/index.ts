@@ -1,7 +1,7 @@
 import cp from "child_process";
 import cluster from "cluster";
-// import { activeMinaInstance } from "@tokenizk/util";
-// import { ProofTaskDto, ProofTaskType, } from "@tokenizk/types";
+import { activeMinaInstance } from "@tokenizk/util";
+import { ProofTaskDto, ProofTaskType, } from "@tokenizk/types";
 import config from "./lib/config";
 
 import { ProofPayload } from "./constant";
