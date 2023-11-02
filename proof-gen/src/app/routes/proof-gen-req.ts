@@ -29,8 +29,8 @@ const handler: RequestHandler<ProofTaskDto<any, any>, null> = async function (
 
     try {
         (process as any).send(req.body);
-    } catch (err) {
-        console.log(err);
+    } catch (error) {
+        console.log(error);
 
     }
 
