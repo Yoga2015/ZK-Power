@@ -2,7 +2,7 @@ import * as dotenv from "dotenv"
 dotenv.config({ path: '../../.env' })
 
 const config = {
-    port: <number>Number(<string>process.env.PROOF_GENERATOR_PORT ?? 8080),
+    port: <number>Number(<string>process.env.PROOF_GENERATOR_PORT ?? 80),
     logger: {
         prettyPrint: <boolean>(process.env.LOGGING_PRETTY_PRINT === 'true' || true), // change if .env
         level: process.env.LOGGING_LEVEL || 'info',

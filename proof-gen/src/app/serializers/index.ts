@@ -1,5 +1,4 @@
-import { IncomingHttpHeaders, IncomingMessage, ServerResponse } from 'http'
-
+import { IncomingHttpHeaders, IncomingMessage, ServerResponse } from 'https'
 
 
 // interface IResponseLog {
