@@ -46,7 +46,7 @@ export class FastifyCore {
         })
 
         // Custom plugins
-        // this.server.register(bearer)
+        this.server.register(bearer)
 
         // Decorators
         this.server.decorateRequest("throwError", throwError)
