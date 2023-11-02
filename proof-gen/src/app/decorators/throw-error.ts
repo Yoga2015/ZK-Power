@@ -4,6 +4,7 @@ export function throwError(
     this: FastifyRequest,
     statusCode: number,
     message: string,
+
     thrownError?: Error
 ): FastifyError {
         this.log.error(thrownError)
