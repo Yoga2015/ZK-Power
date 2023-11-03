@@ -45,7 +45,7 @@ class TaskStack<T> extends Array<T> {
                 let newTasks = await this.reducerStep(ys, n);
                 if (ys.length < newTasks.length)
                     throw Error('Adding more tasks than reducing');
-                if (super.push(...newTasks) > 3) {
+                if (super.push(...newTasks) > 2) {
                     await this.filterAndReduce();
                 }
                 if (this.length <= 1) this.result = this;
