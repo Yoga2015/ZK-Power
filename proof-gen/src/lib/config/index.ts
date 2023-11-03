@@ -23,7 +23,7 @@ const config = {
     },
     swagger: {
         info: {
-            title: "TokeniZK Finance - proof-gen api documentation",
+            title: "TokeniZK Finance - proof-gen api documentation ",
             version: "0.0.1"
         },
         host: <string>process.env.SWAGGER_HOST ? (<string>process.env.SWAGGER_HOST).concat(':').concat(<string>process.env.PROOF_GENERATOR_PORT) : 'localhost:'.concat(<string>process.env.PROOF_GENERATOR_PORT),
