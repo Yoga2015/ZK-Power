@@ -26,7 +26,7 @@ $axiosCoreService.interceptors.response.use(
 
         if (error.ResponseError && error.ResponseError.status !== 200) {
 
-            if (error.ResponseError && error.ResponseError.status !== 0) {
+            if (error.ResponseError || error.ResponseError.status !== 0) {
 
             error.isNetworkError = false;
             if (callbackTrigger.responseError) callbackTrigger.responseError(error);
