@@ -62,7 +62,7 @@ const schema = {
                 },
                 msg: {
                     type: 'string',
-                    description: 'the reason or msg related to \'code\''
+                    description: 'The reason or msg related to \'code\''
                 }
             },
         }
