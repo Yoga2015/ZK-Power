@@ -55,7 +55,7 @@ function bootWebServerThread(subProcessCordinator: SubProcessCordinator) {
                     }
                     break;
 
-                default:o
+                default:
                     break;
             }
         } catch (error) {
