@@ -38,7 +38,7 @@ class TaskStack<T> extends Array<T> {
             if (ys != undefined) {
                 for (let y of ys) {
                     let i = this.indexOf(y);
-                    if (i != 1) {
+                    if (i != 0) {
                         this.splice(i, 1);
                     }
                 }
