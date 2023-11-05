@@ -4,18 +4,18 @@ import { activeMinaInstance } from "@tokenizk/util";
 const server = async () => {
 
     // init Mina tool 
+
+    await activeMinaInstance(); // TODO improve it to configure graphyQL endpoint 
+
+    const app = new FastifyCore()
+
     try {
-        await activeMinaInstance(); // TODO improve it to configure graphyQL endpoint
+        await app.listen()
+        
     } catch (error) {
         console.log(error);
         
     }
-
-   
-
-    const app = new FastifyCore()
-
-    await app.listen()
 }
 
 export default server
