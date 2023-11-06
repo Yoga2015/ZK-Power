@@ -38,14 +38,14 @@ class TaskStack<T> extends Array<T> {
             if (ys != undefined) {
                 for (let y of ys) {
                     let i = this.indexOf(y);
-                    if (i != 1) {
+                    if (i != 0) {
                         this.splice(i, 1);
                     }
                 }
                 let newTasks = await this.reducerStep(ys, n);
                 if (ys.length < newTasks.length)
                     throw Error('Adding more tasks than reducing');
-                if (super.push(...newTasks) > 2) {
+                if (super.push(...newTasks) > 3) {
                     await this.filterAndReduce();
                 }
                 if (this.length <= 6) this.result = this;
