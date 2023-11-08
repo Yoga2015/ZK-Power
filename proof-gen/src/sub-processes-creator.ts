@@ -215,8 +215,8 @@ function getFreeWorker(
     worker = workers.find((w) => w.status == 'IsReady');
 
     if (worker === undefined) {
-        console.log('no free worker currently, will ask it again 1mins later')
-        setTimeout(getFreeWorker, 3 * 60 * 1000, workers, resolve, reject);
+        console.log('no free worker currently, will ask it again 2mins later')
+        setTimeout(getFreeWorker, 1 * 60 * 1000, workers, resolve, reject);
     } else {
         worker!.status = 'Busy';
         return resolve(worker);
