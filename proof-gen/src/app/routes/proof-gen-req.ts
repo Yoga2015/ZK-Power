@@ -7,6 +7,7 @@ import process from "process";
 /**
 * recieve proof-gen req 
 */
+
 export const proofGenReqEndpoint: FastifyPlugin = async function (
     instance,
     options,
