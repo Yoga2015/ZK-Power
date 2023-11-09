@@ -13,8 +13,8 @@ declare module 'fastify'
         throwError<T = unknown>(statusCode: number, message: T, thrownError?: Error): void
     }
 
-    interface FastifyRequest {
-        throwError<T = unknown>(statusCode: number, message: T, thrownError?: Error): void
-    }
+    // interface FastifyRequest {
+    //     throwError<T = unknown>(statusCode: number, message: T, thrownError?: Error): void
+    // }
 
 }
