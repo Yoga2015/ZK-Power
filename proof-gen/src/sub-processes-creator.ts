@@ -73,13 +73,13 @@ export const createSubProcesses = async (n: number) => {
                 });
                 workerMap.get(circuitName)!.splice(index, 2);
 
-              try {
-                  // create a new one again
-                  createFn(proverCnt, circuitName);
-              } catch (error) {
-                console.log(error);
-                
-              }
+                try {
+                    // create a new one again
+                    createFn(proverCnt, circuitName);
+                } catch (error) {
+                    console.log(error);
+
+                }
 
             });
 
@@ -90,7 +90,7 @@ export const createSubProcesses = async (n: number) => {
                 createFn(proverCnt, circuitName);
             } catch (error) {
                 console.log(error);
-                
+
             }
         }
     }
@@ -153,7 +153,7 @@ const waitForAllWorkersReady = async (
         });
 
         if (allReady) {
-            console.log('all workers are ready!')
+            console.log('all workers are ready')
             return resolve();
         }
         console.log('wait for all workers ready...')
