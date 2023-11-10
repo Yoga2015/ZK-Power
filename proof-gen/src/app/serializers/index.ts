@@ -1,8 +1,8 @@
-import { IncomingHttpHeaders, IncomingMessage, ServerResponse } from 'https'
+import { IncomingHttpHeaders, IncomingMessage, ServerResponse } from 'https';
 
 
 interface IResponseLog {
-    statusCode: BigInt
+    statusCode: Number
 }
 
 interface IRequestLog {
