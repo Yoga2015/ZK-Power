@@ -36,7 +36,7 @@ function bootWebServerThread(subProcessCordinator: SubProcessCordinator) {
             const sendResultSeqCallback = async (p: any) => {
                 proofTaskDto.payload.data.data = p;
                 await $axiosCoreService.post('/proof-result', proofTaskDto).then(value => {
-                    console.log('$axiosCoreService.post to /proof-result, response:', value);
+                    console.log('$axiosCoreService.post to /proof-result， response:', value);
                 }).catch(reason => {
                     console.log('$axiosCoreService.post to /proof-result, error:', reason);
                 });
