@@ -9,6 +9,7 @@ export const health: FastifyPlugin = async function (
     done
 ): Promise<void> {
     instance.route({
+        
         method: "POSt",
         url: "/health",
         handler
