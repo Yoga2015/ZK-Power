@@ -153,7 +153,7 @@ const waitForAllWorkersReady = async (
         });
 
         if (allReady) {
-            console.log('all workers are ready')
+            console.log('all workers are ready！')
             return resolve();
         }
         console.log('wait for all workers ready...')
