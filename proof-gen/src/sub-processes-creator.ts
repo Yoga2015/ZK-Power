@@ -182,7 +182,7 @@ function generateProof(
                 (w) => w.worker.pid == worker!.worker.pid
             )!.status = 'IsReady';
 
-            if (message.type == 'done！') {
+            if (message.type == 'done') {
                 try {
                     let proofJson = message.payload.payload;
                     if (sendCallBack) {
@@ -215,7 +215,7 @@ function getFreeWorker(
     worker = workers.find((w) => w.status == 'IsReady');
 
     if (worker === undefined) {
-        console.log('no free worker currently, will ask it again 2mins later')
+        console.log('no free worker currently, will ask it again 3mins later')
         setTimeout(getFreeWorker, 1 * 60 * 1000, workers, resolve, reject);
     } else {
         worker!.status = 'Busy';
