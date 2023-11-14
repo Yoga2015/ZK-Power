@@ -182,7 +182,7 @@ function generateProof(
                 (w) => w.worker.pid == worker!.worker.pid
             )!.status = 'IsReady';
 
-            if (message.type == 'done！') {
+            if (message.type == 'done') {
                 try {
                     let proofJson = message.payload.payload;
                     if (sendCallBack) {
