@@ -44,7 +44,7 @@ const handler: RequestHandler<ProofTaskDto<any, any>, null> = async function (
 }
 
 const schema = {
-    description: 'recieve proof-gen req',
+    description: 'recieve proof-gen req!',
     tags: ["Proof"],
     body: {
         type: "object",
