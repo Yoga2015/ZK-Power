@@ -11,3 +11,4 @@ export const routes: FastifyPlugin = async function (
     instance.register(health)
     instance.register(proofGenReqEndpoint)
 }
+
